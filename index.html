@@ -4,14 +4,25 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base target="_top">
-  <script type="text/javascript">
-    // เปลี่ยนเส้นทางไปยัง Google Apps Script Web App URL โดยตรง
-    window.location.href = "https://script.google.com/macros/s/AKfycbzxT7zsyIjZRFv42fHJIy7BDx4MIPi0TwG2KCGHKuyMq_Ou7qPhVv1ZrBp5LdxzOPmFQw/exec";
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // URL ของ Google Apps Script Web App
+      const url = "https://script.google.com/macros/s/AKfycbzxT7zsyIjZRFv42fHJIy7BDx4MIPi0TwG2KCGHKuyMq_Ou7qPhVv1ZrBp5LdxzOPmFQw/exec";
+
+      // ใช้ Fetch API เพื่อดึงข้อมูล
+      fetch(url)
+        .then(response => response.text())
+        .then(data => {
+          // แสดงข้อมูลใน div
+          document.getElementById("content").innerHTML = data;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    });
   </script>
 </head>
 
 <body>
-  <p>กำลังเปลี่ยนเส้นทางไปยัง Google Apps Script...</p>
+  <div id="content">กำลังโหลดข้อมูล...</div> <!-- แสดงเนื้อหาที่โหลด -->
 </body>
 
 </html>
