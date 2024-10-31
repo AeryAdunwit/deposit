@@ -4,20 +4,11 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base target="_top">
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      // URL ของ Google Apps Script Web App
-      const url = "https://script.google.com/macros/s/AKfycbzxT7zsyIjZRFv42fHJIy7BDx4MIPi0TwG2KCGHKuyMq_Ou7qPhVv1ZrBp5LdxzOPmFQw/exec";
-
-      // ใช้ Fetch API เพื่อดึงข้อมูล
-      fetch(url)
-        .then(response => response.text())
-        .then(data => {
-          // แสดงข้อมูลใน div
-          document.getElementById("content").innerHTML = data;
-        })
-        .catch(error => console.error('Error fetching data:', error));
-    });
-  </script>
 </head>
+
+<body>
+  <iframe style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;border: 0;"
+    src="https://script.google.com/macros/s/AKfycbxb7yyYLGUUeMahxIC8UDALEXpsoL3AYk5hJIO6Pf7YlczUegslIG9Tsgj0fLC8yncZyA/exec"></iframe>
+</body>
+
 </html>
